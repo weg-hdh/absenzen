@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -27,6 +30,7 @@ jobs:
           CLONE_URL: ${{ secrets.HTML_CLONE_URL }}
         run: |
           git clone $CLONE_URL source_code
+          cp config.yml source_code/
           cd source_code
           pip install .
           untis-insight --lite-html
@@ -35,7 +39,7 @@ jobs:
           cp index.html ../public/
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

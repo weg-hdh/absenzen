@@ -1,0 +1,37 @@
+schuljahre:
+  - name: 2025 / 2026
+    start: 2025-09-13
+    end: 2026-07-29
+    land: DE
+    bundesland: BW
+    bezirk: Ulm
+    ferien:
+      - name: Sommerferien
+        start: 2025-07-31
+        ende: 2025-09-13
+      - name: Herbstferien
+        start: 2025-10-27
+        ende: 2025-10-31
+      - name: Weihnachtsferien
+        start: 2025-12-22
+        ende: 2026-01-05
+      - name: Faschingsferien
+        start: 2026-02-16
+        ende: 2026-02-20
+        beweglich: true
+      - name: Osterferien
+        start: 2026-03-30
+        ende: 2026-04-10
+      - name: Unterrichtsfreier Tag
+        start: 2026-05-15
+        ende: 2026-05-15
+        beweglich: true
+      - name: Pfingstferien
+        start: 2026-05-26
+        ende: 2026-06-05
+      - name: Sommerferien
+        start: 2026-07-30
+        ende: 2026-09-12
+
+moodle:
+  ratio_threshold: 10
