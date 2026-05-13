@@ -4,7 +4,7 @@ schuljahre:
     end: 2026-07-29
     land: DE
     bundesland: BW
-    bezirk: Ulm
+    bezirk: Heidenheim
     ferien:
       - name: Sommerferien
         start: 2025-07-31
